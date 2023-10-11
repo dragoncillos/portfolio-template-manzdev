@@ -1,0 +1,11 @@
+---
+import BaseLayout from "src/layouts/BaseLayout.astro";
+import HeroBanner from "@components/HeroBanner.astro";
+
+const title = "Portfolio Astro";
+const description = "Página principal del portfolio construido con Astro";
+---
+<BaseLayout title={title} description={description}>
+	<HeroBanner character="gato1.png" />
+	<h1>Index</h1>
+</BaseLayout>

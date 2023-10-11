@@ -1,0 +1,45 @@
+---
+import "@fontsource-variable/playfair-display";
+
+const ROUTES = [
+	{text: "Inicio", url: "/"},
+	{text: "Servicio", url: "/servicio/"},
+	{text: "Portfolio", url: "/portfolio/"},
+	{text: "FAQ", url: "/faq/"},
+];
+---
+<style>
+	nav {
+		display: flex;
+		justify-content: center;
+		font-family: "Playfair Display Variable", sans-serif;
+		font-size: 1.25rem;
+		font-weight: 600;
+		color: #fff;
+		background: #111;
+
+		& a { /* usamos nesting mola!!!! */
+			display: block;
+			padding: 2rem 3rem;
+			color: white;
+			text-decoration: none;
+			/*text-decoration-color: var(--theme-color-light);  cambia el color del subrayado mola!!!! */
+			border-bottom: 10px solid color-mix(in srgb,  var(--bgcolor), white 20%); /* mola!!!! */
+			transition:
+				background 0.5s,
+				color 0.5s;
+			&:nth-child(1) {--bgcolor: #378937; }
+			&:nth-child(2) {--bgcolor: #c56464; }
+			&:nth-child(3) {--bgcolor: #5b5bcc; }
+			&:nth-child(4) {--bgcolor: #7b2fb0; }
+
+			&:hover {
+				background: var(--bgcolor);
+				color: var(--theme-color-darkest);
+			}
+		}
+	}
+</style>
+<nav>
+	{ROUTES.map(route => <a href={route.url}>{route.text}</a>)}
+</nav>
