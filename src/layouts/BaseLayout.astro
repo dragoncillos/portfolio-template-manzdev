@@ -1,4 +1,6 @@
 ---
+import "@fontsource-variable/playfair-display";
+import "@fontsource-variable/jost";
 import { ViewTransitions } from 'astro:transitions';
 import NavBar from '@components/NavBar.astro';
 import FooterBlock from '@components/FooterBlock.astro';
@@ -13,7 +15,7 @@ const {title, description} = Astro.props;
 		--theme-color-darkest: #000;
 
 		--font-serif: "Playfair Display Variable", sans-serif;
-		--font-unserif: "";
+		--font-sans: Jost, sans-serif;
 	}
 
 	body {
