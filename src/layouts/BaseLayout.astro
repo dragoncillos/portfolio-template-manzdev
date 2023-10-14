@@ -1,6 +1,7 @@
 ---
 import { ViewTransitions } from 'astro:transitions';
-import NavBar from "@components/NavBar.astro";
+import NavBar from '@components/NavBar.astro';
+import FooterBlock from '@components/FooterBlock.astro';
 const {title, description} = Astro.props;
 ---
 <style is:global>
@@ -10,10 +11,17 @@ const {title, description} = Astro.props;
 		--theme-color-medium: #d9734e;
 		--theme-color-dark: #404959;
 		--theme-color-darkest: #000;
+
+		--font-serif: "Playfair Display Variable", sans-serif;
+		--font-unserif: "";
 	}
 
 	body {
 		margin: 0;
+	}
+
+	main {
+		min-height: 300px;
 	}
 </style>
 
@@ -30,6 +38,9 @@ const {title, description} = Astro.props;
 	</head>
 	<body>
 		<NavBar></NavBar>
-		<slot></slot>
+		<main>
+			<slot></slot>
+		</main>
+		<FooterBlock />
 	</body>
 </html>

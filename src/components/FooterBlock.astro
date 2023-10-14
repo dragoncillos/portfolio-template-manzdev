@@ -1,0 +1,23 @@
+---
+import SOCIALS from '@assets/socials.json';
+import SocialLink from './SocialLink.astro';
+---
+<style>
+	footer {
+		background: var(--theme-color-darkest);
+		min-height: 100px;
+	}
+
+	.socials {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		padding: 2rem;
+		gap : 2rem;
+	}
+</style>
+<footer>
+	<div class="socials">
+		{SOCIALS.map(social => <SocialLink social={social}></SocialLink>)}
+	</div>
+</footer>

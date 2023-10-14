@@ -1,5 +1,5 @@
 {
-  "name": "portfolio-template-manzdev2",
+  "name": "portfolio-template-manzdev",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -13,6 +13,7 @@
     "@fontsource-variable/jost": "^5.0.14",
     "@fontsource-variable/playfair-display": "^5.0.16",
     "astro": "^3.2.3",
+    "astro-svg-sprite": "^1.1.0",
     "zod": "^3.22.4"
   }
 }

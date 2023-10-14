@@ -1,0 +1,43 @@
+---
+const { social } = Astro.props;
+---
+<style>
+	.social-link {
+		--size: 24px;
+
+		display: inline-flex;
+		height: calc(var(--size)*1.5);
+	}
+	a {
+		--transition-config: all 0.5s ease;
+
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+
+		font-family: var(--font-serif);
+		font-size: 1rem;
+		text-decoration: none;
+		color: white;
+		transition: var(--transition-config);
+
+		& svg {
+			width: var(--size);
+			height: var(--size);
+			fill: white;
+			transition: var(--transition-config);
+		}
+
+		&:hover {color: var(--theme-color-light);}
+		&:hover svg {fill: var(--theme-color-light);}
+	}
+</style>
+
+<div class="social-link">
+	<a href={social.url}>
+		<svg class="icon">
+			<use href=`/assets/images/sprite.svg#${social.type}`></use>
+		</svg>
+		{social.text}
+	</a>
+</div>

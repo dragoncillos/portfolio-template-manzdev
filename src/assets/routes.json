@@ -1,0 +1,18 @@
+[
+  {
+    "text": "Inicio",
+    "url": "/"
+  },
+  {
+    "text": "Servicio",
+    "url": "/servicio/"
+  },
+  {
+    "text": "Portfolio",
+    "url": "/portfolio/"
+  },
+  {
+    "text": "FAQ",
+    "url": "/faq/"
+  }
+]
