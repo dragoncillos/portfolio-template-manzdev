@@ -1,11 +1,9 @@
 ---
 import BaseLayout from "src/layouts/BaseLayout.astro";
-import HeroBanner from "@components/HeroBanner.astro";
 
 const title = "FAQ: Preguntas más frecuentes";
 const description = "Aquí resuelvo las preguntas más frecuentes de los usuarios";
 ---
-<BaseLayout title={title} description={description}>
-	<HeroBanner character="gato2.png" />
+<BaseLayout title={title} description={description} hero="gato2.png">
 	<h1>FAQ</h1>
 </BaseLayout>

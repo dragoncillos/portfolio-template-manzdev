@@ -1,11 +1,9 @@
 ---
 import BaseLayout from "src/layouts/BaseLayout.astro";
-import HeroBanner from "@components/HeroBanner.astro";
 
 const title = "Portfolio Astro";
 const description = "Mís trabajos";
 ---
-<BaseLayout title={title} description={description}>
-	<HeroBanner character="gato4.png" />
+<BaseLayout title={title} description={description} hero="gato4.png">
 	<h1>Portfolio</h1>
 </BaseLayout>
